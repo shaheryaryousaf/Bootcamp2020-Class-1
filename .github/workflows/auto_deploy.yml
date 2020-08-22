@@ -1,0 +1,25 @@
+name: Bootcamp 2020 - Class 1
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the site in the jekyll/builder container
+     
+    - name: das
+      uses: actions/setup-node@v2-beta
+      with:
+        version: 12
+        
+    - name: Surge
+      run: npm install --global surge
+      
+    - name: Deploying using surge
+      run: surge ./ bootcamp-class1-007.surge.sh --token {{ secrets.SURGE_TOKEN }} 
