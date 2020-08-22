@@ -16,7 +16,7 @@ jobs:
     - name: das
       uses: actions/setup-node@v2-beta
       with:
-        version: 12
+        node-version: 12
         
     - name: Surge
       run: npm install --global surge
