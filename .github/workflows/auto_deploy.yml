@@ -11,14 +11,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the site in the jekyll/builder container
      
-    - name: das
+    - name: Installing Node
       uses: actions/setup-node@v2-beta
       with:
         node-version: 12
         
-    - name: Surge
+    - name: Installing Surge
       run: npm install --global surge
       
     - name: Deploying using surge
